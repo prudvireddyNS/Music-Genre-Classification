@@ -3,7 +3,7 @@ import { Music, Upload, AlertCircle } from 'lucide-react';
 
 // Update API_URL for Vercel deployment
 const API_URL = import.meta.env.VITE_API_URL;
-console.log()
+console.log(API_URL)
 
 const MusicGenreClassifier = () => {
   const [selectedFile, setSelectedFile] = useState(null);
