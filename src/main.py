@@ -2,7 +2,7 @@ import joblib
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from data_processing import load_data, preprocess_data, split_data
-from feature_extraction import extract_features_in_batches
+from backend.feature_extraction import extract_features_in_batches
 from model_training import train_svm, train_knn, train_decision_tree, train_neural_network
 from evaluation import evaluate_model
 

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Music, Upload, AlertCircle } from 'lucide-react';
 
-const API_URL = 'http://localhost:8000';
+// Update API_URL for Vercel deployment
+const API_URL = '/api';
 
 const MusicGenreClassifier = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -121,8 +122,11 @@ const MusicGenreClassifier = () => {
                 <span className="font-medium">Detected Genre:</span>{' '}
                 <span className="text-blue-600">{result.genre}</span>
               </p>
-              
-              
+              {/* Uncomment the following lines to display confidence */}
+              {/* <p className="text-gray-700">
+                <span className="font-medium">Confidence:</span>{' '}
+                <span className="text-blue-600">{(result.confidence * 100).toFixed(1)}%</span>
+              </p> */}
             </div>
           </div>
         )}
@@ -132,8 +136,3 @@ const MusicGenreClassifier = () => {
 };
 
 export default MusicGenreClassifier;
-
-{/* <p className="text-gray-700">
-                <span className="font-medium">Confidence:</span>{' '}
-                <span className="text-blue-600">{(result.confidence * 100).toFixed(1)}%</span>
-              </p> */}

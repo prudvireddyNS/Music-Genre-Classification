@@ -8,6 +8,7 @@ import tempfile
 import os
 from pydantic import BaseModel
 import shutil
+# from feature_extraction import extract_features
 from src.feature_extraction import extract_features
 
 app = FastAPI()
@@ -90,4 +91,4 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.2", port=8000)
